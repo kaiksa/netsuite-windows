@@ -117,7 +117,14 @@ class PortScannerTool(BaseTool):
         
         self.clear_output()
         self.print_header(f"Port Scan: {host}")
-        self.append_output(f"Scanning {len(ports) if isinstance(ports, list) else f'{ports.start}-{ports.stop-1'} ports...", 'INFO')
+        
+        # Format port info WITHOUT nested f-strings (Python syntax error)
+        if isinstance(ports, list):
+            port_info = f"{len(ports)} ports"
+        else:
+            # Use .format() instead of nested f-string
+            port_info = "{}-{} ports".format(ports.start, ports.stop - 1)
+        self.append_output(f"Scanning {port_info}...", 'INFO')
         self.append_output("-" * 50, 'INFO')
         
         # Update button states
