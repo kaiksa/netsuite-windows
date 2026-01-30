@@ -1,0 +1,54 @@
+name: Build Windows Executable
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+    
+    - name: Build executable with PyInstaller
+      run: |
+        pyinstaller --onefile --windowed --name NetSuite --add-data "tools;tools" --add-data "utils;utils" netsuite_gui.py
+    
+    - name: Create release package
+      run: |
+        mkdir release
+        copy dist\NetSuite.exe release\
+        copy README.md release\
+        copy LICENSE release\
+        copy BUILD.md release\
+    
+    - name: Upload to release
+      if: github.event_name == 'release'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          release/NetSuite.exe
+          release/README.md
+          release/LICENSE
+          release/BUILD.md
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: NetSuite-Windows-Executable
+        path: release/NetSuite.exe
