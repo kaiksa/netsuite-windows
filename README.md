@@ -4,6 +4,19 @@ A comprehensive network administration toolkit for Windows with a graphical inte
 
 ![NetSuite GUI](https://img.shields.io/badge/version-1.0.0-blue) ![Python](https://img.shields.io/badge/python-3.8+-green) ![Platform](https://img.shields.io/badge/platform-windows-lightgrey)
 
+## ⚠️ Important: No Pre-built Executables Yet
+
+**This project currently requires building from source on Windows.** Pre-built `.exe` files are not yet available in releases.
+
+**To use NetSuite:**
+1. Install Python 3.8+ on Windows
+2. Clone this repository
+3. Either run directly with `python netsuite_gui.py` OR build an executable using PyInstaller (see [BUILD.md](BUILD.md))
+
+**Why no executables?** This project is built on a Linux development environment. To create Windows `.exe` files, someone needs to build it on a Windows machine using PyInstaller. If you'd like to contribute pre-built executables, please see [BUILD.md](BUILD.md) for instructions!
+
+---
+
 ## Features
 
 ### Core Network Tools
