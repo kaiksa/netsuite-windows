@@ -1,0 +1,22 @@
+# NetSuite Windows GUI - Requirements
+
+# Core dependencies (minimal)
+# The GUI uses tkinter which is built into Python
+
+# Optional dependencies for enhanced functionality
+# Uncomment if you need these features:
+
+# For better HTTP requests (used in some tools)
+# requests>=2.28.0
+
+# For advanced IP handling
+# ipaddress>=1.0.23  # Built into Python 3.3+
+
+# For packaging as executable
+# pyinstaller>=5.0
+
+# Windows-specific dependencies
+# pywin32>=305  # For Windows-specific features
+
+# Note: NetSuite GUI is designed to work with minimal dependencies.
+# Most functionality uses Python standard library and Windows built-in tools.
