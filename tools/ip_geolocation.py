@@ -22,7 +22,7 @@ class IPGeolocationTool(BaseTool):
         
         # IP input
         ttk.Label(input_frame, text="IP Address:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.ip_var = ttk.StringVar(value="")
+        self.ip_var = tk.StringVar(value="")
         ttk.Entry(input_frame, textvariable=self.ip_var, width=20).grid(row=0, column=1, padx=5, pady=5)
         
         # My IP button

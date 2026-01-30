@@ -20,7 +20,7 @@ class SubnetCalculatorTool(BaseTool):
         
         # IP/CIDR input
         ttk.Label(input_frame, text="Network (IP/CIDR):").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.network_var = ttk.StringVar(value="192.168.1.0/24")
+        self.network_var = tk.StringVar(value="192.168.1.0/24")
         ttk.Entry(input_frame, textvariable=self.network_var, width=25).grid(row=0, column=1, padx=5, pady=5)
         
         # Calculate button

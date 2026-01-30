@@ -22,12 +22,12 @@ class DNSLookupTool(BaseTool):
         
         # Domain input
         ttk.Label(input_frame, text="Domain:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.domain_var = ttk.StringVar(value="example.com")
+        self.domain_var = tk.StringVar(value="example.com")
         ttk.Entry(input_frame, textvariable=self.domain_var, width=30).grid(row=0, column=1, padx=5, pady=5)
         
         # Record type selector
         ttk.Label(input_frame, text="Record Type:").grid(row=0, column=2, padx=5, pady=5, sticky=tk.W)
-        self.record_type_var = ttk.StringVar(value="A")
+        self.record_type_var = tk.StringVar(value="A")
         record_types = ["A", "AAAA", "MX", "NS", "TXT", "CNAME", "SOA", "PTR"]
         ttk.Combobox(input_frame, textvariable=self.record_type_var, values=record_types, 
                     width=10, state="readonly").grid(row=0, column=3, padx=5, pady=5)
@@ -39,7 +39,7 @@ class DNSLookupTool(BaseTool):
         adv_frame = ttk.Frame(input_frame)
         adv_frame.grid(row=1, column=0, columnspan=5, sticky=tk.W, padx=5, pady=5)
         
-        self.dns_server_var = ttk.StringVar(value="")
+        self.dns_server_var = tk.StringVar(value="")
         ttk.Label(adv_frame, text="DNS Server (optional):").pack(side=tk.LEFT)
         ttk.Entry(adv_frame, textvariable=self.dns_server_var, width=20).pack(side=tk.LEFT, padx=5)
         

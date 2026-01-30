@@ -22,17 +22,17 @@ class WakeOnLanTool(BaseTool):
         
         # MAC address input
         ttk.Label(input_frame, text="MAC Address:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.mac_var = ttk.StringVar(value="")
+        self.mac_var = tk.StringVar(value="")
         ttk.Entry(input_frame, textvariable=self.mac_var, width=20).grid(row=0, column=1, padx=5, pady=5)
         
         # Broadcast address
         ttk.Label(input_frame, text="Broadcast IP:").grid(row=0, column=2, padx=5, pady=5, sticky=tk.W)
-        self.broadcast_var = ttk.StringVar(value="255.255.255.255")
+        self.broadcast_var = tk.StringVar(value="255.255.255.255")
         ttk.Entry(input_frame, textvariable=self.broadcast_var, width=15).grid(row=0, column=3, padx=5, pady=5)
         
         # Port
         ttk.Label(input_frame, text="Port:").grid(row=0, column=4, padx=5, pady=5, sticky=tk.W)
-        self.port_var = ttk.StringVar(value="9")
+        self.port_var = tk.StringVar(value="9")
         ttk.Entry(input_frame, textvariable=self.port_var, width=6).grid(row=0, column=5, padx=5, pady=5)
         
         # Send button
@@ -47,7 +47,7 @@ class WakeOnLanTool(BaseTool):
         
         # Name input
         ttk.Label(history_frame, text="Name:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.name_var = ttk.StringVar(value="")
+        self.name_var = tk.StringVar(value="")
         ttk.Entry(history_frame, textvariable=self.name_var, width=15).grid(row=0, column=1, padx=5, pady=5)
         
         # Save button

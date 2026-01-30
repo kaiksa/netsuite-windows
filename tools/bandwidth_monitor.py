@@ -22,7 +22,7 @@ class BandwidthMonitorTool(BaseTool):
         
         # Interface selector
         ttk.Label(input_frame, text="Interface:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.interface_var = ttk.StringVar(value="auto")
+        self.interface_var = tk.StringVar(value="auto")
         self.interface_combo = ttk.Combobox(input_frame, textvariable=self.interface_var, 
                                            width=20, state="readonly")
         self.interface_combo.grid(row=0, column=1, padx=5, pady=5)
@@ -33,7 +33,7 @@ class BandwidthMonitorTool(BaseTool):
         
         # Update interval
         ttk.Label(input_frame, text="Interval (s):").grid(row=0, column=3, padx=5, pady=5, sticky=tk.W)
-        self.interval_var = ttk.StringVar(value="2")
+        self.interval_var = tk.StringVar(value="2")
         ttk.Entry(input_frame, textvariable=self.interval_var, width=5).grid(row=0, column=4, padx=5, pady=5)
         
         # Start/Stop button

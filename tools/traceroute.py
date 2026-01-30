@@ -21,12 +21,12 @@ class TracerouteTool(BaseTool):
         
         # Destination input
         ttk.Label(input_frame, text="Destination:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.dest_var = ttk.StringVar(value="google.com")
+        self.dest_var = tk.StringVar(value="google.com")
         ttk.Entry(input_frame, textvariable=self.dest_var, width=30).grid(row=0, column=1, padx=5, pady=5)
         
         # Max hops
         ttk.Label(input_frame, text="Max Hops:").grid(row=0, column=2, padx=5, pady=5, sticky=tk.W)
-        self.max_hops_var = ttk.StringVar(value="30")
+        self.max_hops_var = tk.StringVar(value="30")
         ttk.Entry(input_frame, textvariable=self.max_hops_var, width=8).grid(row=0, column=3, padx=5, pady=5)
         
         # Resolve hostnames

@@ -23,7 +23,7 @@ class NetworkDiscoveryTool(BaseTool):
         
         # Network range input
         ttk.Label(input_frame, text="Network Range:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.range_var = ttk.StringVar(value="auto")
+        self.range_var = tk.StringVar(value="auto")
         ttk.Entry(input_frame, textvariable=self.range_var, width=20).grid(row=0, column=1, padx=5, pady=5)
         
         # Auto-detect button
@@ -31,7 +31,7 @@ class NetworkDiscoveryTool(BaseTool):
         
         # Timeout
         ttk.Label(input_frame, text="Timeout (s):").grid(row=0, column=3, padx=5, pady=5, sticky=tk.W)
-        self.timeout_var = ttk.StringVar(value="1")
+        self.timeout_var = tk.StringVar(value="1")
         ttk.Entry(input_frame, textvariable=self.timeout_var, width=5).grid(row=0, column=4, padx=5, pady=5)
         
         # Scan button

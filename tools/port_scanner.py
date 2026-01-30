@@ -37,12 +37,12 @@ class PortScannerTool(BaseTool):
         
         # Host input
         ttk.Label(input_frame, text="Host/IP:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.host_var = ttk.StringVar(value="127.0.0.1")
+        self.host_var = tk.StringVar(value="127.0.0.1")
         ttk.Entry(input_frame, textvariable=self.host_var, width=25).grid(row=0, column=1, padx=5, pady=5)
         
         # Scan type
         ttk.Label(input_frame, text="Scan:").grid(row=0, column=2, padx=5, pady=5, sticky=tk.W)
-        self.scan_type_var = ttk.StringVar(value="common")
+        self.scan_type_var = tk.StringVar(value="common")
         scan_frame = ttk.Frame(input_frame)
         scan_frame.grid(row=0, column=3, columnspan=2, sticky=tk.W)
         
@@ -55,16 +55,16 @@ class PortScannerTool(BaseTool):
         
         # Port range inputs
         ttk.Label(input_frame, text="From:").grid(row=1, column=2, padx=5, pady=5, sticky=tk.W)
-        self.port_from_var = ttk.StringVar(value="1")
+        self.port_from_var = tk.StringVar(value="1")
         ttk.Entry(input_frame, textvariable=self.port_from_var, width=8).grid(row=1, column=3, padx=5, pady=5, sticky=tk.W)
         
         ttk.Label(input_frame, text="To:").grid(row=1, column=4, padx=5, pady=5, sticky=tk.W)
-        self.port_to_var = ttk.StringVar(value="1024")
+        self.port_to_var = tk.StringVar(value="1024")
         ttk.Entry(input_frame, textvariable=self.port_to_var, width=8).grid(row=1, column=5, padx=5, pady=5, sticky=tk.W)
         
         # Timeout
         ttk.Label(input_frame, text="Timeout (s):").grid(row=0, column=6, padx=5, pady=5, sticky=tk.W)
-        self.timeout_var = ttk.StringVar(value="1")
+        self.timeout_var = tk.StringVar(value="1")
         ttk.Entry(input_frame, textvariable=self.timeout_var, width=5).grid(row=0, column=7, padx=5, pady=5)
         
         # Scan button

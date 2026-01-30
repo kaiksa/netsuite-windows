@@ -22,7 +22,7 @@ class SSLCheckerTool(BaseTool):
         
         # Host input
         ttk.Label(input_frame, text="Host:Port:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.host_var = ttk.StringVar(value="google.com:443")
+        self.host_var = tk.StringVar(value="google.com:443")
         ttk.Entry(input_frame, textvariable=self.host_var, width=30).grid(row=0, column=1, padx=5, pady=5)
         
         # Check button

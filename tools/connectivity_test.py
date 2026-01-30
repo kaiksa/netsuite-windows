@@ -31,12 +31,12 @@ class ConnectivityTestTool(BaseTool):
         
         # Custom host input
         ttk.Label(input_frame, text="Custom Host (optional):").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.host_var = ttk.StringVar(value="")
+        self.host_var = tk.StringVar(value="")
         ttk.Entry(input_frame, textvariable=self.host_var, width=25).grid(row=0, column=1, padx=5, pady=5)
         
         # Test type
         ttk.Label(input_frame, text="Test:").grid(row=0, column=2, padx=5, pady=5, sticky=tk.W)
-        self.test_type_var = ttk.StringVar(value="full")
+        self.test_type_var = tk.StringVar(value="full")
         ttk.Combobox(input_frame, textvariable=self.test_type_var, 
                     values=["full", "quick", "custom"], width=10, 
                     state="readonly").grid(row=0, column=3, padx=5, pady=5)

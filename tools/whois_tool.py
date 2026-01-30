@@ -21,7 +21,7 @@ class WHOISTool(BaseTool):
         
         # Query input
         ttk.Label(input_frame, text="Domain/IP:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.query_var = ttk.StringVar(value="example.com")
+        self.query_var = tk.StringVar(value="example.com")
         ttk.Entry(input_frame, textvariable=self.query_var, width=30).grid(row=0, column=1, padx=5, pady=5)
         
         # Lookup button

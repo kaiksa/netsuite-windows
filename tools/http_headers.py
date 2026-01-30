@@ -21,12 +21,12 @@ class HTTPHeadersTool(BaseTool):
         
         # URL input
         ttk.Label(input_frame, text="URL:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.url_var = ttk.StringVar(value="https://www.example.com")
+        self.url_var = tk.StringVar(value="https://www.example.com")
         ttk.Entry(input_frame, textvariable=self.url_var, width=40).grid(row=0, column=1, padx=5, pady=5)
         
         # Method
         ttk.Label(input_frame, text="Method:").grid(row=0, column=2, padx=5, pady=5, sticky=tk.W)
-        self.method_var = ttk.StringVar(value="HEAD")
+        self.method_var = tk.StringVar(value="HEAD")
         ttk.Combobox(input_frame, textvariable=self.method_var, 
                     values=["HEAD", "GET"], width=8, 
                     state="readonly").grid(row=0, column=3, padx=5, pady=5)

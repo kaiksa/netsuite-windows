@@ -22,12 +22,12 @@ class PingTool(BaseTool):
         
         # Host input
         ttk.Label(input_frame, text="Host/IP:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.host_var = ttk.StringVar(value="8.8.8.8")
+        self.host_var = tk.StringVar(value="8.8.8.8")
         ttk.Entry(input_frame, textvariable=self.host_var, width=30).grid(row=0, column=1, padx=5, pady=5)
         
         # Ping count
         ttk.Label(input_frame, text="Count:").grid(row=0, column=2, padx=5, pady=5, sticky=tk.W)
-        self.count_var = ttk.StringVar(value="4")
+        self.count_var = tk.StringVar(value="4")
         ttk.Entry(input_frame, textvariable=self.count_var, width=8).grid(row=0, column=3, padx=5, pady=5)
         
         # Continuous ping
