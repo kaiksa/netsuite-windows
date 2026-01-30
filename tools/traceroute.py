@@ -5,6 +5,7 @@ Traces the network path to a destination.
 
 import subprocess
 import re
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

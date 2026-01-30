@@ -6,6 +6,7 @@ Scans for open ports on a target host.
 import socket
 import subprocess
 import threading
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

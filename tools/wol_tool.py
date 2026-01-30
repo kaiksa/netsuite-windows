@@ -6,6 +6,7 @@ Sends magic packets to wake up remote devices.
 import socket
 import struct
 import re
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

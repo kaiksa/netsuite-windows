@@ -6,6 +6,7 @@ Checks SSL/TLS certificates for HTTPS sites.
 import ssl
 import socket
 import datetime
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

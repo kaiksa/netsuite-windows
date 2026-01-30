@@ -6,6 +6,7 @@ Performs ICMP ping with statistics and continuous monitoring.
 import subprocess
 import re
 import time
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

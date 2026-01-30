@@ -5,6 +5,7 @@ Performs WHOIS lookups for domain and IP information.
 
 import subprocess
 import re
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

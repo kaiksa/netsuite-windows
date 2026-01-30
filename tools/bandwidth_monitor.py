@@ -6,6 +6,7 @@ Monitors network interface bandwidth usage.
 import subprocess
 import re
 import time
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

@@ -5,6 +5,7 @@ Inspects HTTP response headers from web servers.
 
 import urllib.request
 import urllib.error
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

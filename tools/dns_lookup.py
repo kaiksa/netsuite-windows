@@ -3,10 +3,11 @@ DNS Lookup Tool for NetSuite GUI
 Performs DNS lookups and displays various DNS record types.
 """
 
+import tkinter as tk
+from tkinter import ttk
 import socket
 import subprocess
 import re
-from tkinter import ttk
 from .base_tool import BaseTool
 
 

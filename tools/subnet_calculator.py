@@ -4,6 +4,7 @@ Calculates network information from IP/CIDR.
 """
 
 import ipaddress
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

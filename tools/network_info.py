@@ -6,6 +6,7 @@ Displays network interface and configuration information.
 import socket
 import subprocess
 import platform
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

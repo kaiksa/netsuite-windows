@@ -6,6 +6,7 @@ Tests internet connectivity and connection quality.
 import socket
 import subprocess
 import time
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

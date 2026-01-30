@@ -6,6 +6,7 @@ Provides geographical information for IP addresses.
 import urllib.request
 import json
 import re
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 

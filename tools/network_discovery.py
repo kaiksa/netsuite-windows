@@ -7,6 +7,7 @@ import socket
 import subprocess
 import threading
 import ipaddress
+import tkinter as tk
 from tkinter import ttk
 from .base_tool import BaseTool
 
